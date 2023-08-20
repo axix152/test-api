@@ -20,9 +20,31 @@ const user = [
         'email': 'younas@gmail.com',
     }
 ]
+const userlist = [
+    {
+        'id': '1',
+        'name': 'Aziz',
+        'email': 'axix@gmail.com',
+    },
+    {
+        'id': '2',
+        'name': 'axix',
+        'email': 'aziz@gmail.com',
+    },
+    {
+        'id': '3',
+        'name': 'younas',
+        'email': 'younas@gmail.com',
+    },
+    {
+        'id': '4',
+        'name': 'Abbas',
+        'email': 'abbas@gmail.com',
+    }
+]
 
-app.use('/', (req, res) => {
-    res.status(200).json(user)
+app.get('/userlist', (req, res) => {
+    res.status(200).send(userlist)
 })
 
 
